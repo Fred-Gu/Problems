@@ -21,7 +21,7 @@ class Solution {
     private boolean isSymmetricTree(TreeNode p, TreeNode q) {
         if (p == null || q == null) return p == q;
         if (p.val == q.val) 
-            return isSameTree(p.left, q.right) && isSameTree(p.right, q.left);
+            return isSymmetricTree(p.left, q.right) && isSymmetricTree(p.right, q.left);
         return false;
     }
 }
